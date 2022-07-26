@@ -8,12 +8,12 @@ public class Main {
 
     public static void task() {
         int[] arr = new int[30];
-        int sum = 0;
-        int max = 0;
-        int min = 100_000;
-        double mean = 0;
+        int sum = arr[0];
+        int max = arr[0];
+//        int min = arr[0];
+        double mean = arr[0];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * 100_00) + 100_00;
+           arr[i] = (int) (Math.random() * 100_000) + 100_000;
             sum += arr[i];
         }
         System.out.println(Arrays.toString(arr));
@@ -24,6 +24,7 @@ public class Main {
             }
         }
         System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
+        int min = max;
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] < min) {
                 min = arr[i];
