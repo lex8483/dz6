@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         task();
@@ -14,6 +16,7 @@ public class Main {
             arr[i] = (int) (Math.random() * 100_00) + 100_00;
             sum += arr[i];
         }
+        System.out.println(Arrays.toString(arr));
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > max) {
